@@ -110,7 +110,7 @@ li {
 
 .main {
     padding-top: 40px;
-    padding-bottom: 80px;
+    padding-bottom: 90px;
     &__inner {
         @include flex;
         @include j-c;
@@ -169,7 +169,7 @@ li {
 
 .our-job {
     background: #fafafa;
-    padding: 70px 0 100px;
+    padding: 90px 0;
     &__title {
         font-weight: bold;
         font-size: 30px;
@@ -246,7 +246,7 @@ li {
 }
 
 .feedback {
-    padding: 70px 0 100px;
+    padding: 90px 0;
     &__title {
         font-weight: bold;
         font-size: 30px;
@@ -337,7 +337,7 @@ li {
 
 .price {
     background: #fafafa;
-    padding: 87px 0;
+    padding: 90px 0;
     &__title {
         font-weight: bold;
         font-size: 30px;
@@ -403,7 +403,7 @@ li {
 }
 
 .stage {
-    padding: 85px 0;
+    padding: 90px 0;
     &__title {
         font-weight: bold;
         font-size: 30px;
@@ -468,10 +468,11 @@ li {
 
 .questions {
     background: #fafafa;
-    padding: 90px 0 100px;
+    padding: 90px 0 65px;
     &__title {
         font-weight: bold;
         font-size: 30px;
+        margin-bottom: 20px;
         line-height: 140%;
         color: #222222;
     }
@@ -491,7 +492,7 @@ li {
         @include flex;
         @include j-c;
         @include al-i(center);
-        & svg {}
+        cursor: pointer;
     }
     &__btn--active {
         transform: rotate(180deg);
@@ -507,7 +508,7 @@ li {
 }
 
 .contacts {
-    padding: 80px 0 90px;
+    padding: 90px 0;
     &__title {
         font-weight: bold;
         font-size: 30px;
@@ -652,8 +653,8 @@ li {
     transform: translate(-50%, -50%);
     z-index: 200;
     display: none;
-    width: 1200px;
-    height: 700px;
+    width: 1000px;
+    height: 600px;
     & iframe {
         width: 100%;
         height: 100%;
@@ -663,12 +664,12 @@ li {
     }
     &__close-btn {
         position: absolute;
-        right: -10px;
-        top: -45px;
+        right: -25px;
+        top: -25px;
         background-color: #fff;
         border-radius: 100%;
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -700,17 +701,38 @@ li {
     }
 }
 
+.thanks {
+    display: none;
+    padding-top: 60px;
+    text-align: center;
+    &__title {
+        font-weight: bold;
+        font-size: 45px;
+        line-height: 150%;
+        color: #222222;
+    }
+    &__desc {
+        font-size: 30px;
+        line-height: 170%;
+        color: #424242;
+        margin-top: 24px;
+    }
+}
+
 .contact-modal {
+    padding-bottom: 140px;
     padding-top: 40px;
     border-radius: 4px;
     font-size: 16px;
-    line-height: 170%;
+    line-height: 150%;
     color: #424242;
     background-color: #fff;
     margin-left: auto;
     margin-right: auto;
     &__inner {
         width: 780px;
+        margin-left: auto;
+        margin-right: auto;
     }
     &__close-btn {
         position: absolute;
@@ -728,6 +750,7 @@ li {
         font-size: 18px;
         line-height: 170%;
         color: #424242;
+        margin-top: 24px;
     }
     &__label {
         margin-top: 60px;
@@ -741,15 +764,20 @@ li {
         font-size: 12px;
         line-height: 16px;
         color: #999999;
+        position: absolute;
+        left: 0;
+        top: 5px;
         display: none;
         &.active {
             display: inline-block;
+            top: -15px;
         }
     }
     &__hint {
         font-size: 12px;
         line-height: 16px;
         color: #999999;
+        margin-top: 4px;
     }
     & textarea {
         padding-right: 40px;
@@ -761,7 +789,7 @@ li {
         outline: none;
         font-size: 14px;
         line-height: 28px;
-        color: #666666;
+        color: #222;
         @include flex;
         @include al-i(flex-end);
         &.input-error {
@@ -769,6 +797,9 @@ li {
             &::placeholder {
                 color: #BD2D2D;
             }
+        }
+        &::placeholder {
+            color: #666;
         }
     }
     & input {
@@ -782,7 +813,7 @@ li {
         outline: none;
         font-size: 14px;
         line-height: 28px;
-        color: #666666;
+        color: #222;
         &.input-error {
             border-bottom: 2px solid #BD2D2D;
             &::placeholder {
@@ -793,6 +824,12 @@ li {
         &:focus {
             border-bottom: 2px solid #FFDD2E;
         }
+        &::placeholder {
+            color: #666;
+        }
+    }
+    &__group {
+        position: relative;
     }
     &__error {
         color: #BD2D2D;
@@ -950,7 +987,7 @@ li {
         }
     }
     .questions {
-        padding: 50px 0 55px;
+        padding: 50px 0 30px;
         &__title {
             font-size: 25px;
         }
@@ -972,8 +1009,8 @@ li {
         }
     }
     .feedback-modal {
-        width: 960px;
-        height: 500px;
+        width: 800px;
+        height: 400px;
     }
     .agree-modal {
         width: 960px;
@@ -1290,8 +1327,8 @@ li {
         }
     }
     .feedback-modal {
-        width: 720px;
-        height: 350px;
+        width: 500px;
+        height: 250px;
     }
     .agree-modal {
         width: 720px;

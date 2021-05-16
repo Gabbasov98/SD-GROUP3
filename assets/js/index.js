@@ -1,10 +1,12 @@
 function slidersJob() {
 
     var swiper = new Swiper('.our-job .swiper-container', {
-        speed: 200,
+        speed: 1000,
         spaceBetween: 30,
-        slidesPerView: 1,
-        parallax: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
         navigation: {
             nextEl: '.our-job .swiper-button-next',
             prevEl: '.our-job .swiper-button-prev',
@@ -17,14 +19,20 @@ function slidersJob() {
             320: {
                 slidesPerView: 1,
                 slidesPerView: 'auto',
-                speed: 800,
                 spaceBetween: 20,
+                effect: 'slide',
+                fadeEffect: {
+                    crossFade: false
+                },
             },
 
             992: {
                 slidesPerView: 1,
-                speed: 200,
                 spaceBetween: 30,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
             },
         }
     })
@@ -32,10 +40,13 @@ function slidersJob() {
 
 function slidersFeedback() {
     var swiper = new Swiper('.feedback .swiper-container', {
-        speed: 200,
+        speed: 1000,
         spaceBetween: 30,
         slidesPerView: 1,
-        parallax: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
         navigation: {
             nextEl: '.feedback .swiper-button-next',
             prevEl: '.feedback .swiper-button-prev',
@@ -48,14 +59,20 @@ function slidersFeedback() {
             320: {
                 slidesPerView: 1,
                 slidesPerView: 'auto',
-                speed: 500,
                 spaceBetween: 20,
+                effect: 'slide',
+                fadeEffect: {
+                    crossFade: false
+                },
             },
 
             992: {
                 slidesPerView: 1,
-                speed: 200,
                 spaceBetween: 30,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true
+                },
             },
         }
     })
@@ -117,6 +134,8 @@ function checkInput() {
         formSuccess++;
     }
     if (formSuccess === 3) {
+        $(".contact-modal").hide();
+        $(".thanks").show()
         return true;
     }
 }
@@ -147,7 +166,6 @@ $(document).ready(function() {
         closeContactModal()
     })
 
-    $("#tel").mask("+7 (999) 999-99-99");
 
     let aboutInput = $("#about-project").val();
     let nameInput = $("#name").val();
@@ -211,7 +229,7 @@ $(document).ready(function() {
     });
 
 
-    $("#about-project").keyup(function() {
+    $("#about-project").keydown(function() {
         if ($(this).val() !== "") {
             $("label[for='about-project']").addClass("active");
         } else {
@@ -219,18 +237,37 @@ $(document).ready(function() {
         }
     })
     autosize($('textarea'));
-    $("#name").keyup(function() {
+    $("#name").keydown(function() {
         if ($(this).val() !== "") {
             $("label[for='name']").addClass("active");
         } else {
             $("label[for='name']").removeClass("active");
         }
     })
-    $("#tel").keyup(function() {
+    $("#tel").keydown(function() {
         if ($(this).val() !== "") {
             $("label[for='tel']").addClass("active");
+
         } else {
             $("label[for='tel']").removeClass("active");
         }
     })
+    $.fn.setCursorPosition = function(pos) {
+        this.each(function(index, elem) {
+            if (elem.setSelectionRange) {
+                elem.setSelectionRange(pos, pos);
+            } else if (elem.createTextRange) {
+                var range = elem.createTextRange();
+                range.collapse(true);
+                range.moveEnd('character', pos);
+                range.moveStart('character', pos);
+                range.select();
+            }
+        });
+        return this;
+    };
+    $("#tel").click(function() {
+        $("#tel").setCursorPosition(3)
+    }).mask("+7 999 999 99 99")
+
 });

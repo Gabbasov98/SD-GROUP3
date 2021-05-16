@@ -136,7 +136,7 @@ li {
 
 .main {
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 90px;
 }
 .main__inner {
   display: flex;
@@ -201,7 +201,7 @@ li {
 
 .our-job {
   background: #fafafa;
-  padding: 70px 0 100px;
+  padding: 90px 0;
 }
 .our-job__title {
   font-weight: bold;
@@ -280,7 +280,7 @@ li {
 }
 
 .feedback {
-  padding: 70px 0 100px;
+  padding: 90px 0;
 }
 .feedback__title {
   font-weight: bold;
@@ -372,7 +372,7 @@ li {
 
 .price {
   background: #fafafa;
-  padding: 87px 0;
+  padding: 90px 0;
 }
 .price__title {
   font-weight: bold;
@@ -456,7 +456,7 @@ li {
 }
 
 .stage {
-  padding: 85px 0;
+  padding: 90px 0;
 }
 .stage__title {
   font-weight: bold;
@@ -527,11 +527,12 @@ li {
 
 .questions {
   background: #fafafa;
-  padding: 90px 0 100px;
+  padding: 90px 0 65px;
 }
 .questions__title {
   font-weight: bold;
   font-size: 30px;
+  margin-bottom: 20px;
   line-height: 140%;
   color: #222222;
 }
@@ -559,6 +560,7 @@ li {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
+  cursor: pointer;
 }
 .questions__btn--active {
   transform: rotate(180deg);
@@ -573,7 +575,7 @@ li {
 }
 
 .contacts {
-  padding: 80px 0 90px;
+  padding: 90px 0;
 }
 .contacts__title {
   font-weight: bold;
@@ -754,8 +756,8 @@ li {
   transform: translate(-50%, -50%);
   z-index: 200;
   display: none;
-  width: 1200px;
-  height: 700px;
+  width: 1000px;
+  height: 600px;
 }
 .feedback-modal iframe {
   width: 100%;
@@ -766,12 +768,12 @@ li {
 }
 .feedback-modal__close-btn {
   position: absolute;
-  right: -10px;
-  top: -45px;
+  right: -25px;
+  top: -25px;
   background-color: #fff;
   border-radius: 100%;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
 }
 
 .agree-modal {
@@ -802,11 +804,30 @@ li {
   margin-bottom: 20px;
 }
 
+.thanks {
+  display: none;
+  padding-top: 60px;
+  text-align: center;
+}
+.thanks__title {
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 150%;
+  color: #222222;
+}
+.thanks__desc {
+  font-size: 30px;
+  line-height: 170%;
+  color: #424242;
+  margin-top: 24px;
+}
+
 .contact-modal {
+  padding-bottom: 140px;
   padding-top: 40px;
   border-radius: 4px;
   font-size: 16px;
-  line-height: 170%;
+  line-height: 150%;
   color: #424242;
   background-color: #fff;
   margin-left: auto;
@@ -814,6 +835,8 @@ li {
 }
 .contact-modal__inner {
   width: 780px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .contact-modal__close-btn {
   position: absolute;
@@ -831,6 +854,7 @@ li {
   font-size: 18px;
   line-height: 170%;
   color: #424242;
+  margin-top: 24px;
 }
 .contact-modal__label {
   margin-top: 60px;
@@ -844,15 +868,20 @@ li {
   font-size: 12px;
   line-height: 16px;
   color: #999999;
+  position: absolute;
+  left: 0;
+  top: 5px;
   display: none;
 }
 .contact-modal label.active {
   display: inline-block;
+  top: -15px;
 }
 .contact-modal__hint {
   font-size: 12px;
   line-height: 16px;
   color: #999999;
+  margin-top: 4px;
 }
 .contact-modal textarea {
   padding-right: 40px;
@@ -864,7 +893,7 @@ li {
   outline: none;
   font-size: 14px;
   line-height: 28px;
-  color: #666666;
+  color: #222;
   display: flex;
   display: -webkit-box;
   display: -webkit-flex;
@@ -880,6 +909,9 @@ li {
 .contact-modal textarea.input-error::placeholder {
   color: #BD2D2D;
 }
+.contact-modal textarea::placeholder {
+  color: #666;
+}
 .contact-modal input {
   padding-right: 40px;
   font-family: Inter;
@@ -891,7 +923,7 @@ li {
   outline: none;
   font-size: 14px;
   line-height: 28px;
-  color: #666666;
+  color: #222;
 }
 .contact-modal input.input-error {
   border-bottom: 2px solid #BD2D2D;
@@ -901,6 +933,12 @@ li {
 }
 .contact-modal input:active, .contact-modal input:focus {
   border-bottom: 2px solid #FFDD2E;
+}
+.contact-modal input::placeholder {
+  color: #666;
+}
+.contact-modal__group {
+  position: relative;
 }
 .contact-modal__error {
   color: #BD2D2D;
@@ -1056,7 +1094,7 @@ li {
   }
 
   .questions {
-    padding: 50px 0 55px;
+    padding: 50px 0 30px;
   }
   .questions__title {
     font-size: 25px;
@@ -1079,8 +1117,8 @@ li {
   }
 
   .feedback-modal {
-    width: 960px;
-    height: 500px;
+    width: 800px;
+    height: 400px;
   }
 
   .agree-modal {
@@ -1389,8 +1427,8 @@ li {
   }
 
   .feedback-modal {
-    width: 720px;
-    height: 350px;
+    width: 500px;
+    height: 250px;
   }
 
   .agree-modal {
